@@ -1,0 +1,38 @@
+{
+  "name": "parser.generator",
+  "version": "0.1.0",
+  "description": "parser generator to analyze tokens and build a required object",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "mocha": "mocha --recursive",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgbuils/parser.generator.git"
+  },
+  "keywords": [
+    "parser",
+    "generator",
+    "token",
+    "expressions"
+  ],
+  "author": "Xavier Garcia Buils <xgbuils@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xgbuils/parser.generator/issues"
+  },
+  "homepage": "https://github.com/xgbuils/parser.generator#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.2",
+    "iterum": "^0.8.3",
+    "mocha": "^3.2.0",
+    "parser.status": "^0.1.0",
+    "parser.token": "^0.1.0"
+  }
+}
