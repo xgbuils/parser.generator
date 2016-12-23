@@ -56,7 +56,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
                 var result = parser(parserIterator)
                 expect(result).to.be.deep.equal([num])
             })
@@ -76,7 +76,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
                 var result = parser(parserIterator)
                 expect(result).to.be.deep.equal([a, b])
             })
@@ -106,7 +106,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
                 var result = parser(parserIterator)
                 expect(result).to.be.deep.equal([
                     [a, b],
@@ -139,7 +139,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
                 var result = parser(parserIterator)
                 expect(result).to.be.deep.equal([[[a, b], c], d])
             })
@@ -171,7 +171,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
                 var result = parser(parserIterator)
                 expect(result).to.be.deep.equal([a, [b, [c, [d]]]])
             })
@@ -186,7 +186,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken('(', '('),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)
@@ -203,7 +203,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)
@@ -220,7 +220,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(',', ','),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)
@@ -237,7 +237,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(6, 'number'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)
@@ -253,7 +253,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                 var lex = List([
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)
@@ -271,7 +271,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)
@@ -293,7 +293,7 @@ describe('testing parserGenerator using parser of tuples', function () {
                     createToken(')', ')'),
                     createEndToken()
                 ])
-                var parserIterator = parserGenerator(lex.build(), parserTokenClasses, parserStatus('START_EXPR'))
+                var parserIterator = parserGenerator(lex.build()(), parserTokenClasses, parserStatus('START_EXPR'))
 
                 function test () {
                     parser(parserIterator)

@@ -1,9 +1,9 @@
-function ParserGenerator (lexerGenerator, parserTokenClasses, parserStatus) {
+function ParserGenerator (lexerIterator, parserTokenClasses, parserStatus) {
     if (!(this instanceof ParserGenerator)) {
-        return new ParserGenerator(lexerGenerator, parserTokenClasses, parserStatus)
+        return new ParserGenerator(lexerIterator, parserTokenClasses, parserStatus)
     }
     this.parserTokenClasses = parserTokenClasses
-    this.iterator = lexerGenerator()
+    this.iterator = lexerIterator
     this.parserStatus = parserStatus
 }
 
