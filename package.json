@@ -1,6 +1,6 @@
 {
   "name": "parser.generator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "parser generator to analyze tokens and build a required object",
   "main": "src/index.js",
   "directories": {
