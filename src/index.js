@@ -29,6 +29,8 @@ function nextToken (parserIterator) {
     if (ParserTokenConstr) {
         var token = new ParserTokenConstr(rawToken)
         return token
+    } else if (rawToken.type) {
+        throw new Error('`' + rawToken.type + '` is not a parser token type')
     }
 }
 
